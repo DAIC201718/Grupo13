@@ -1,0 +1,18 @@
+# To execute de gpsfake
+
+gpsfake -P 2948 -c 0.2 gpsNMEA.txt
+python gpsdData.py
+
+# To execute LED actuator
+
+python led.py
+
+# Send data with dweet.io to FreeBoard
+
+python uploadFreeboard.py
+
+# Execute Web Server (flask)
+ifconfig
+python /servicio-web/app/__init__.py
+# Navegador --> IP:5000/login
+# User = mikel PW = mikel
